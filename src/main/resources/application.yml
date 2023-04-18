@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: ms-demo
+  profiles:
+    active:
+      - dev
+  config:
+    import: optional:configserver:http://localhost:8888/
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://127.0.0.1:53704/realms/sweetify
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
