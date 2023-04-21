@@ -46,4 +46,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: frcalderon/sweetify-ms-demo:${{ steps.getVersion.outputs.version }}
+        tags: frcalderon/sweetify-ms-demo:${{ steps.getVersion.outputs.version }} , frcalderon/sweetify-ms-demo:latest
